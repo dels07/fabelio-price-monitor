@@ -20,7 +20,7 @@
                     <div class="col-9">
                         <h1 class="h4">{{ $product->title }}</h1>
                         <h2 class="h6 text-muted">{{ $product->alt_title }}</h2>
-                        <h3 class="h6"><strong>{{ $product->price }}</strong> <small>({{ $product->updated_at->diffForHumans() }})</small></h3>
+                        <h3 class="h6"><strong>{{ $product->price_detail }}</strong> <small>({{ $product->updated_at->diffForHumans() }})</small></h3>
                         <a href="{{ $product->url }}" target="_blank"><small>Product Page</small></a>
                     </div>
                 </div>

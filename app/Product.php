@@ -19,9 +19,9 @@ class Product extends Model
 {
     protected $fillable = ['product_id', 'title', 'alt_title', 'description', 'additional_info', 'price', 'url', 'images'];
 
-    public function getPriceAttribute($value)
+    public function getPriceDisplayAttribute()
     {
-        $value = number_format($value, 0);
+        $value = number_format($this->price, 0);
 
         return "Rp {$value}";
     }
