@@ -30,7 +30,7 @@
                                 <small>{{ $product->alt_title }}</small>
                             </td>
                             <td>{{ Str::words(strip_tags($product->description), 10, '...') }}</td>
-                            <td class="text-right">{{ $product->price }}</td>
+                            <td class="text-right">{{ $product->price_display }}</td>
                             <td class="text-center">{!! $product->created_at_display !!}</td>
                             <td class="text-center">{!! $product->updated_at_display !!}</td>
                             <td class="text-center">
