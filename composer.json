@@ -18,7 +18,6 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
         "facade/ignition": "^1.4",
-        "fruitcake/laravel-telescope-toolbar": "^1.1",
         "fzaninotto/faker": "^1.4",
         "laravel/dusk": "^5.6",
         "laravel/telescope": "^2.1",
