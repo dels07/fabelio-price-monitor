@@ -68,17 +68,17 @@
 @endsection
 
 @section('script')
-{{-- <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js" defer></script> --}}
+<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js" defer></script>
 <script>
     window.onload = function() {
         var ctx = document.getElementById('priceChart').getContext('2d');
         var priceChart = new Chart(ctx, {
             type: 'line',
             data:{
-                labels: ['00:00', '01:00', '02:00'],
+                labels: [{!! $dates !!}],
                 datasets: [{
                     label: 'Price',
-                    data: [100, 200, 300],
+                    data: [{!! $prices !!}],
                     fill: false
                 }]
             }

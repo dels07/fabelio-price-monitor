@@ -62,6 +62,17 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('detail')->with('product', $product);
+        $dates = [];
+        $prices = [];
+
+        foreach ($product->priceHistories as $history) {
+            $dates[] = "'{$history->created_at->addHours(7)}'";
+            $prices[] = (int) str_replace(['Rp ', ',', '.'], '', $history->price);
+        }
+
+        return view('detail')
+            ->with('product', $product)
+            ->with('dates', implode(',', $dates))
+            ->with('prices', implode(',', $prices));
     }
 }
