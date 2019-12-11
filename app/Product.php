@@ -33,14 +33,14 @@ class Product extends Model
 
     public function getCreatedAtDisplayAttribute()
     {
-        $value = str_replace(' ', '<br>', $this->created_at);
+        $value = str_replace(' ', '<br>', $this->created_at->addHours(7));
 
         return $value;
     }
 
     public function getUpdatedAtDisplayAttribute()
     {
-        $value = str_replace(' ', '<br>', $this->updated_at);
+        $value = str_replace(' ', '<br>', $this->updated_at->addHours(7));
 
         return $value;
     }
