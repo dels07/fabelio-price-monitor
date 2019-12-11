@@ -68,7 +68,7 @@
 @endsection
 
 @section('script')
-{{-- <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js" defer></script> --}}
+<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js" defer></script>
 <script>
     window.onload = function() {
         var ctx = document.getElementById('priceChart').getContext('2d');
