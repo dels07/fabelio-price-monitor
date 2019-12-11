@@ -75,10 +75,10 @@
         var priceChart = new Chart(ctx, {
             type: 'line',
             data:{
-                labels: ['start', {!! $dates !!}],
+                labels: [{!! $dates !!}],
                 datasets: [{
                     label: 'Price',
-                    data: [0, {!! $prices !!}],
+                    data: [{!! $prices !!}],
                     fill: false
                 }]
             }
