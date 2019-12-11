@@ -23,7 +23,7 @@ class FabelioServiceTest extends TestCase
     {
         $url = 'https://fabelio.com/ip/taby-bench.html';
         $expected = [
-            'productId' => '8553',
+            'product_id' => '8553',
             'title' => 'Bangku Panjang Taby',
             'alt_title' => 'Taby Bench',
             'price' => 849000,
@@ -32,7 +32,7 @@ class FabelioServiceTest extends TestCase
 
         $actual = Fabelio::getProductInfo($url);
 
-        $this->assertArrayHasKey('productId', $actual);
+        $this->assertArrayHasKey('product_id', $actual);
         $this->assertArrayHasKey('title', $actual);
         $this->assertArrayHasKey('alt_title', $actual);
         $this->assertArrayHasKey('description', $actual);
