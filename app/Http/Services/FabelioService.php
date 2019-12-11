@@ -50,3 +50,25 @@ class FabelioService
 
         return $json;
     }
+
+    /**
+     * Get Fabelio price update
+     *
+     * @param string $productId
+     * @return integer $price
+     */
+    public function getPriceUpdate(string $productId)
+    {
+        if (!$productId) {
+            throw new Exception('product id cannot be empty!');
+        }
+
+        $json = file_get_contents("https://fabelio.com/insider/data/product/id/{$productId}");
+        $json = json_decode($json);
+
+        $price = $json->product->unit_sale_price ?? $json->product->unit_price;
+        $price = (int) str_replace('.00', '', $price);
+
+        return $price;
+    }
+}
