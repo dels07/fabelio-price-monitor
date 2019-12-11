@@ -36,3 +36,15 @@ Tools needed for installation:
 -   Page to display all links added to system, with pagination (5 items per page)
 -   View detail of product (from scrapped info) including name, description, additional info, and images
 -   Price update chart on product detail page (updated every hour)
+
+## Important Files
+
+-   `app/Console/Commands/UpdatePrices.php` (contain artisan command to update price)
+-   `app/Http/Controllers/ProductController.php` (contain main application logic)
+-   `app/Http/Services/FabelioService.php` (contain logic for web scraping & price update)
+
+## Tests
+
+-   All tests available in `tests` folder
+-   For unit test run command `./vendor/bin/phpunit`
+-   For browser test you must configure [Laravel Dusk](https://laravel.com/docs/6.x/dusk) and run `php artisan dusk`
