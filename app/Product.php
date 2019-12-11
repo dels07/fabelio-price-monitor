@@ -19,6 +19,8 @@ class Product extends Model
 {
     protected $fillable = ['product_id', 'title', 'alt_title', 'description', 'additional_info', 'price', 'url', 'images'];
 
+    protected $with = ['priceHistories'];
+
     public function getPriceDisplayAttribute()
     {
         $value = number_format($this->price, 0);
